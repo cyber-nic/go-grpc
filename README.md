@@ -1,7 +1,3 @@
-# Origin
-
-https://github.com/grpc/grpc-go/blob/master/examples/helloworld/greeter_server/main.go
-
 # Install Dependecies
 
 1. Install `protoc` dependencies
@@ -14,30 +10,28 @@ sudo dnf install protobuf-compiler
 
 # gRPC Hello World
 
-Follow these setup to run the [quick start][] example:
-
-1.  Get the code:
+1.  Build
 
     ```console
-    $ go get google.golang.org/grpc/examples/helloworld/greeter_client
-    $ go get google.golang.org/grpc/examples/helloworld/greeter_server
+    $ make
     ```
 
 2.  Run the server:
 
     ```console
-    $ $(go env GOPATH)/bin/greeter_server &
+    $ make server
     ```
 
 3.  Run the client:
 
     ```console
-    $ $(go env GOPATH)/bin/greeter_client
+    $ make client
     Greeting: Hello world
     ```
 
-For more details (including instructions for making a small change to the
-example code) or if you're having trouble running this example, see [Quick
-Start][].
+# More
 
-[quick start]: https://grpc.io/docs/languages/go/quickstart
+For more details (including instructions for making a small change to the
+example code) or if you're having trouble running this example, see the [Original code][].
+
+https://github.com/grpc/grpc-go/blob/master/examples/helloworld/greeter_server/main.go
